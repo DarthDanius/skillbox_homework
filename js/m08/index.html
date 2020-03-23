@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>модуль 08. Домашняя работа</title>
+		<script src="js/script.js"></script>
+		<style>
+			.wrap {
+				width: 960px;
+				margin: auto;
+			}
+			textarea {
+				display: block;
+				width: 100%;
+				height: 150px;
+				border: solid 1px;
+				resize: none;
+			}
+			p {
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<h2>задание 1</h2>
+			<p>
+				Написать программу, которая:<br>
+				просит пользователя ввести кусок JavaScript-кода;<br>
+				пытается запустить этот код в строгом режиме (strict mode);<br>
+				если в коде возникла ошибка, перехватывает ее и выводит соответствующее сообщение.
+			</p>
+			
+			<label for="code"></label>
+			<textarea id="code" name="code" placeholder="введите ваш код"></textarea>
+			<input type="button" id="code-exec" value="exec" />
+			
+			
+			<h2>задание 2</h2>
+			<p>
+				Написать функцию filterByType, которая принимает любое кол-во аргументов:<br>
+				первый аргумент — это тип данных (number, string или boolean), по которому нужно отфильтровать следующие аргументы (со 2-го и далее);<br>
+				аргументы, начиная со 2-го и далее — любые значения;<br>
+				функция должна возвращать массив с теми аргументами, которые соответствуют типу данных, переданному в первом аргументе.<br>
+			</p>
+			
+			<label for="function">filterByType</label>
+			<!-- <input type="text" id="function" name="filterByType" /> -->
+			<textarea id="function" name="filterByType" placeholder="введите аргументы через запятую"></textarea>
+			<input type="button" id="function-exec" value="exec" />
+			
+		</div>
+	</body>
+
+</html>

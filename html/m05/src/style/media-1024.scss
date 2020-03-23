@@ -1,0 +1,111 @@
+/* 320 540 800 1024 */
+
+$margin-side: 20px;
+
+
+@media (max-width: 1024px) {
+
+    .fixed-container {
+      max-width: 1024px;
+    }
+
+    .header-meta,
+    .header-nav,
+    .column-right,
+    .footer__wrap {
+      padding-left: $margin-side;
+      padding-right: $margin-side;
+    }
+
+    .header-bar__wrap {
+      padding: 19px $margin-side;
+    }
+  
+    .main-content {
+      padding-bottom: 20px;
+    }
+  
+    .main-content__wrap {    
+        grid-template-columns: minmax(250px, 1fr) [column-left] minmax(460px, 1.84fr) [column-center];
+    }
+
+    .column-left {
+      margin-left: $margin-side;
+    }
+
+    .column-center {
+      margin-right: $margin-side;
+    }
+  
+    .column-right {
+      padding-top: 50px;
+      width: 100%;
+      grid-column-end: span 2;
+    }
+  
+    .banner-list {
+      display: flex;
+    }
+  
+    .banner-list :not(:last-child) {
+      margin: 0 20px 0 0;
+    }
+    
+    .special-news {
+      // margin-top: 50px;
+      flex-direction: column;
+    }
+
+    .special-item-master {
+      margin-left: $margin-side;
+      margin-right: $margin-side;
+    }
+  
+    .special-column-right {
+      margin-left: $margin-side;
+      margin-right: $margin-side;
+    }
+  
+    .special-list {
+      margin-bottom: 38px;
+    }
+  
+    .footer__wrap {
+      display: grid;
+      grid-template-columns: repeat(3, max-content);
+      grid-column-gap: 20px;
+      margin: 0 20px;
+    }
+  
+    .footer__col-1 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(max-content, 1fr));
+      // grid-column-gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    // .footer__col-3 {
+    //   justify-self: center;
+    // }
+
+    // .footer__col-4 {
+    //   justify-self: flex-end;
+    // }
+  
+    .footer__logos > :nth-child(n) {
+      margin: 0 10px;
+    }
+
+    .footer__logos > :first-child {
+      margin-left: 0px;
+    }
+    
+    .footer__logos > :last-child {
+      margin-right: 0px;
+    }
+    
+  
+    .footer__col-3 {
+      align-content: flex-start;
+    }
+  }

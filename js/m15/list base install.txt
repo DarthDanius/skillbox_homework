@@ -1,0 +1,8 @@
+npm i -D webpack webpack-cli webpack-merge html-webpack-plugin mini-css-extract-plugin webpack-dev-server uglifyjs-webpack-plugin copy-webpack-plugin source-map-loader moment-locales-webpack-plugin webpack-bundle-analyzer
+npm i -D babel-loader @babel/core @babel/preset-env babel-preset-react
+npm i -D style-loader css-loader postcss-loader sass-loader file-loader node-sass
+npm i -D autoprefixer css-mqpacker postcss-normalize stylefmt cssnano
+
+npm i react react-dom redux react-redux
+npm i -D @babel/preset-react 
+npm i -D moment

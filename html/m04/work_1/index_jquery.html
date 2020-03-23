@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>homework m04</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="script/jquery.min.3.4.1.js"></script>
+	<!-- <script src="script/script_vanil.js"></script> -->
+	<script src="script/script_jquery.js"></script>
+</head>
+<body>
+	<div class="fixed-container">
+
+		<section class="column">
+			<h1 class="column-header">Список дел:</h1>
+			
+			<ul id="list1">
+			
+				<li id="list-empty" class="list-empty">Список пуст...</li>
+
+			</ul>
+
+		</section>
+
+		<section class="column">
+			<h1 class="column-header">Добавить новое дело</h1>
+
+			<form id="item-create-form" class="item-create">
+				<label><span>*</span>Название</label>
+				<input type="text" id="item-create-name" class="item-create-name" autofocus />
+				<label><span>*</span>Описание</label>
+				<textarea id="item-create-description" class="item-create-description"></textarea>
+				<input id="add-item" type="button" value="Добавить дело" />
+			</form>
+		</section>
+
+	</div>
+
+</body>
+</html>

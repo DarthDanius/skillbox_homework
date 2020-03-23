@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>homework m10</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="script/script.js"></script>
+</head>
+<body>
+
+	<div class="wrap">
+		<header class="head-interface">
+			<div class="fixed-container">
+				<button type="button" id="edit" class="btn interface" value="Редактировать">Редактировать</button>
+				<button type="button" id="save" class="btn interface" value="Сохранить" disabled>Сохранить</button>
+				<button type="button" id="cancel" class="btn interface" value="Отмена" disabled>Отмена</button>
+				<div class="slider-wrap">
+					<p class="lable">текущая версия</p>
+					<div class="slide-container">
+						<ul data-type="slide" id="slide"  class="slide disabled slide-hide-child">
+							<!-- <li id="slide-item-default" class="slide-item slide-item-current"> -->
+								<!-- <p>default text</p> -->
+							<!-- </li> -->
+						</ul>
+						<button type="button" id="btn-scroll" class="btn-scroll hidden disabled" value=" "></button>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<section class="editor-wrap">
+			<div class="fixed-container">
+
+				<div id="editor" class="editor" contenteditable="false">
+					
+					<p>Цикл for..in выполняет перебор всех свойств объекта, а не только цифровых.</p>
+
+					<p>В браузере и других программных средах также существуют так называемые «псевдомассивы» – объекты, которые выглядят, как массив. То есть, у них есть свойство length и индексы, но они также могут иметь дополнительные нечисловые свойства и методы, которые нам обычно не нужны. Тем не менее, цикл for..in выведет и их. Поэтому, если нам приходится иметь дело с объектами, похожими на массив, такие «лишние» свойства могут стать проблемой.</p>
+
+					<p>Цикл for..in оптимизирован под произвольные объекты, не массивы, и поэтому в 10-100 раз медленнее. Увеличение скорости выполнения может иметь значение только при возникновении узких мест. Но мы всё же должны представлять разницу.</p>
+
+					<p>В общем, не следует использовать цикл for..in для массивов.</p>				
+
+				</div>
+			</div>
+		</section>
+	</div>
+
+</body>
+</html>

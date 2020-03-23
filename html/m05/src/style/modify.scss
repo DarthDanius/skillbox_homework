@@ -1,0 +1,16 @@
+.unvisible {
+  visibility: hidden;
+  position: absolute;
+  z-index: -10;
+}
+
+.img_fit-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner_fit-cover {
+  height: 100%;
+  object-fit: cover;
+}

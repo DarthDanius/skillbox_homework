@@ -1,0 +1,26 @@
+/* 320 540 800 1024 */
+
+$margin-side: 20px;
+
+@media (min-width: 541px) and (max-width: 730px) {
+
+  .footer__wrap {
+    grid-template-columns: repeat(2, minmax(max-content, 1fr));
+  }
+
+  .footer__col-1 {
+    grid-column-end: span 2;
+  }
+
+
+  .footer__col-3 {
+    padding: 0;
+  }
+
+
+  .footer__col-4 {
+    // grid-column-end: span 3;
+    justify-self: flex-start;
+  }
+
+}

@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.fixed-container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.football {
+  position: relative;
+  margin: 2.5vh auto;
+  height: 95vh;
+  max-width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+.field {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.ball {
+  position: absolute; top: 0; left: 0;
+  width: 100px; height: 100px;
+  z-index: 1;
+}
+
+.goal {
+  background-color: rgba(240, 240, 240, 0.4);
+  width: 5.5%;
+  height: 15%;  
+  position: absolute;  
+  top: 42.6%;
+}
+
+.goal-left {
+  left: 0;
+}
+
+.goal-right {
+  right: 0;
+}

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.slider-wrap {
+  max-width: 1024px;
+  min-width: 320px;
+  background-color: gainsboro;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.slider__slide {
+  padding: 15px;
+}
+
+.slider__image-cont {
+  margin-bottom: 35px;
+  height: 290px;
+}

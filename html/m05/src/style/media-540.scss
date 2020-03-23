@@ -1,0 +1,273 @@
+/* 320 540 800 1024 */
+
+$margin-side: 20px;
+
+@media (max-width: 540px) {
+
+  .header-bar__wrap {
+    justify-content: center;
+    padding: 17px 0;
+  }
+
+  .header-bar__data {
+    display: none;
+  }
+
+  .header-bar__link,
+  .header-bar__text {
+    font-size: 0.8125rem;
+  }
+  
+  .header-meta-mobile-row-1 {
+    padding: 10px 6px;
+  }
+
+  .header-meta-mobile-row-2 {
+    padding: 44px 15px 40px;
+  }
+
+  .main-content {
+    padding-bottom: 0;
+  }
+
+  .main-content__wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .column-left {
+    padding-top: 25px;
+  }
+
+
+
+// column-left elem
+  .news-list {
+    padding-right: 15px;
+  }
+
+  .section-header {
+    padding-left: 24px;
+    padding-top: 28px;
+  }
+
+  .news-item__props {
+    padding-left: 6px;
+  }
+
+  .news-item__link {
+    flex-basis: 36.5%;
+  }
+
+  .news-item__time {
+    flex-basis: 23.5%;
+  }
+
+
+
+
+  .btn-allnews-ref {
+    width: 85%;
+    margin: 38px auto 48px;
+  }
+
+  .column-center {
+    margin: 0;
+    padding-bottom: 46px;
+  }
+
+  .news-img-list {
+    grid-template-columns: 1fr;
+  }
+
+  .news-img-list li:first-of-type {
+    grid-column-end: span 1;
+  }
+
+  .news-img-item-master__container,
+  .special-item-master__container {
+    position: relative;
+    overflow: hidden;
+    height: 100vw;
+    min-height: 320px;
+  }
+
+  .news-img-item-master__container img,
+  .special-item-master__container img {
+    position: absolute;
+    width: auto;
+    object-fit: contain;
+    right: 0;
+  }
+
+// column-center elem
+  .news-img-item-master__link {
+    margin-top: 47%;
+  }
+
+  .news-img-item-master__title {
+    width: 90%;
+    font-size: 1.4375rem;
+    margin-top: 19px;
+  }
+
+  .news-img-item-master__date {
+    flex-basis: 32%;
+  }
+
+  .news-img-item {
+    width: 100%;
+  }
+
+  .news-img-item-master__content {
+    width: 100%;
+  }
+
+  .news-img-item__title {
+    padding: 0 23px;
+  }
+
+  .news-img-item__props {
+    padding-left: 25px;
+  }
+
+  .news-img-item__link {
+    flex-basis: 23%;
+  }
+
+  .news-img-item__time {
+    flex-basis: 23%;
+  }
+
+  
+
+  .column-right {
+    width: 100%;
+    overflow-x: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 50px;
+  }
+
+  .banner-list {
+    display: flex;
+    padding: 0 25px;
+    width: 570px;
+    justify-content: space-between;
+  }
+
+  .banner {
+    width: 250px;
+    // margin: 0 25px;
+  }
+
+  .banner_fit-cover {
+    width: 250px;
+    height: 400px;
+  }
+
+  .special-news {
+    margin-top: 0;
+  }
+
+  .special-item-master {
+    margin: 0;
+  }
+
+  .special-item-master__container {
+    height: 96vw;
+    min-height: 307.2px;
+  }
+
+  .special-item-master__title {
+    font-size: 1.4375rem;
+    width: 100%;
+  }
+
+  .special-item-master__props {
+    margin-top: 8%;
+  }
+
+  .special-item-master__link {
+    margin-top: 38.5%;
+  }
+
+  .special-item-master__date {
+    flex-basis: 31%;
+  }
+
+  .special-column-right {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+  }
+
+  .special-list {
+    padding-left: 25px;
+    padding-right: 45px;
+  }
+
+  .special-news-item {
+    padding-top: 10px;
+  }
+
+  .special-news-item__title {
+    margin-bottom: 15px;
+  }
+
+  .special-news-item__link {
+    flex-basis: 26.5%;
+  }
+
+  .special-news-item__time {
+    flex-basis: 22.5%;
+  }
+
+  .footer__wrap {
+    grid-template-columns: 1fr;
+    padding-top: 45px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 25px;
+    min-width: 270px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #26354e;
+  }
+
+  .footer__col-1 {
+    width: 100%;
+    line-height: 1.2em;
+    border-bottom: 1px solid #26354e;
+    padding-bottom: 13px;
+    grid-column-end: span 1;
+  }
+
+  .footer__col-3 {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    line-height: 1.3em;
+  }
+
+  .footer__col-3 > :nth-child(1) {
+    grid-column-end: span 2;
+  }
+
+  .footer__col-4 {
+    padding-top: 30px;
+    justify-self: flex-start;
+  }
+
+  .footer-bar p {
+    margin: 25px 0;
+    font-size: 14px;
+    padding-right: 60px;
+    padding-left: 25px;
+    text-align: left;
+  }
+
+  .footer {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+}

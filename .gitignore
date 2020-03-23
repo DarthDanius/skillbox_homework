@@ -1,0 +1,12 @@
+node_modules
+.vscode
+design
+build
+*.zip
+*.7z
+*.rar
+test
+.git
+*.cdr
+шаблон
+package-lock.json
