@@ -10,11 +10,11 @@ class Widget extends React.Component{
     super(props);
     this.state = {
       posts: [
-        {id:0, name:'Вася', message:'Всем привет!', date: new Date},
-        {id:1, name:'Петя', message:'Всем привет!', date: new Date},
-        {id:2, name:'Коля', message:'Всем привет!', date: new Date},
-        {id:3, name:'Женя', message:'Всем привет!', date: new Date},
-        {id:4, name:'Миша', message:'Всем привет!', date: new Date},
+        {id: this.generateId(), name:'Вася', message:'Всем привет!', date: new Date},
+        {id: this.generateId(), name:'Петя', message:'Всем привет!', date: new Date},
+        {id: this.generateId(), name:'Коля', message:'Всем привет!', date: new Date},
+        {id: this.generateId(), name:'Женя', message:'Всем привет!', date: new Date},
+        {id: this.generateId(), name:'Миша', message:'Всем привет!', date: new Date},
       ],
       newPostText:'',
       newPostName:''
@@ -50,7 +50,7 @@ class Widget extends React.Component{
       return
     }
     const newState = this.state.posts.push({
-      id:4,
+      id: this.generateId(),
       name: this.state.newPostText,
       message: this.state.newPostName,
       date: new Date
@@ -71,6 +71,10 @@ class Widget extends React.Component{
     const postIndex = this.state.posts.findIndex((el) => el.id === id );// преобразуем копию
     const newState = this.state.posts.splice(postIndex, 1);
     this.setState( {newState}, ()=>this.saveState() );
+  }
+
+  generateId(){
+    return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g,c=>(c^crypto.getRandomValues(new Uint8Array(1))[0]&15 >> c/4).toString(16));
   }
 
   render(){
