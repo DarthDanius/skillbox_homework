@@ -3,10 +3,21 @@
 import React from 'react';
 
 let Post = (props) => {
-
-  let date = (typeof props.date === 'string') ? new Date(props.date) : props.date;
-  const formatDate = new Intl.DateTimeFormat(['ru', 'en'], { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }).format(date);
-  // let removePost = props.removePost();
+  for( let i of ['name', 'message', 'date']) {
+    if (!props[i]) {
+      console.log('пустое свойство!');
+      return false;
+    }
+  }
+  let date = null;
+  let formatDate = null;
+  try {
+    date = (typeof props.date === 'string') ? new Date(props.date) : props.date;
+    formatDate = new Intl.DateTimeFormat(['ru', 'en'], { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }).format(date);
+  } catch(err) {
+    console.error(err);
+    return false
+  }
 
   return (
     <article id={props.id} className="post">

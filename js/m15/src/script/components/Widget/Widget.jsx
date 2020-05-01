@@ -1,7 +1,6 @@
 'use strict'
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Panel from './Panel/Panel.jsx'
 import Post from './Post/Post.jsx'
 
@@ -17,17 +16,28 @@ class Widget extends React.Component{
         {id: this.generateId(), name:'Миша', message:'Всем привет!', date: new Date},
       ],
       newPostText:'',
-      newPostName:''
-    }
+      newPostName:'',
+      hasError: false
+    };
 
     this.prefix = '82kcew32dA3';
 
     if (localStorage.hasOwnProperty(this.prefix+'_state')) {
-      Object.assign(this.state, JSON.parse(localStorage.getItem( this.prefix+'_state' , this.state )));
-      console.log('state загружен')
+      this.loadState();
     }
 
     this.removePost = this.removePost.bind(this);
+  }
+
+  loadState() {
+    let storageState = null;
+    try {
+      storageState = JSON.parse(localStorage.getItem( this.prefix+'_state' , this.state ));
+    } catch(err) {
+      console.err(err);
+    }
+    Object.assign(this.state, storageState);
+    console.log('state загружен');
   }
 
   saveState() {
@@ -84,7 +94,12 @@ class Widget extends React.Component{
 
         { 
           this.state.posts.map( (post, i) => {
-            return  <Post key={i} id={post.id} name={post.name} message={post.message} date={post.date} removePost={this.removePost} />
+            return  (
+              // <ErrorBoundary key={i}>
+              //   <Post id={post.id} name={post.name} message={post.message} date={post.date} removePost={this.removePost} />
+              // </ErrorBoundary>
+              <Post key={i} id={post.id} name={post.name} message={post.message} date={post.date} removePost={this.removePost} />
+            )
           })
         }
 
