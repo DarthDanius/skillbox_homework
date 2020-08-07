@@ -3,12 +3,6 @@
 import React from 'react';
 
 let Post = (props) => {
-  for( let i of ['name', 'message', 'date']) {
-    if (!props[i]) {
-      console.log('пустое свойство! ', i, ' у поста ', props.id);
-      return false;
-    }
-  }
   let date = null;
   let formatDate = null;
   try {
@@ -24,7 +18,7 @@ let Post = (props) => {
       <p className="post__name">
         {props.name}
         <span>
-          <button type="button" className="post__remove" onClick={ (e) => {props.removePost(e,props.id)} }></button>
+          <button type="button" className="post__remove" onClick={ () => {props.removePost(props.id)} }></button>
         </span>
       </p>
       <p className="post__text">{props.message}</p>

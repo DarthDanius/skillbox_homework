@@ -1,26 +1,26 @@
 'use strict'
 
-// require('../img-sprite-vector/' + name + '.svg');
-// require.context('../', true, /(?<=img-sprite-vector\/)[^\/]+?.svg/)
-import '../style/index.scss'
-import {createStore} from 'redux';
-import reducer from './redux/reducer.js'
+import '../style/index.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx'
-import Widget from './components/Widget/Widget.jsx'
+import {Provider} from 'react-redux';
+import store from './redux/store.js';
+import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary.jsx';
+import Widget from './components/Widget/Widget.jsx';
 
 document.addEventListener('DOMContentLoaded', () => {
 
   ReactDOM.render(
     <ErrorBoundary>
-      <Widget/>
+      <Provider store = {store}>
+        <Widget/>
+      </Provider>
     </ErrorBoundary>,
-    // <Widget/>,
     document.querySelector('.widget')
   )
 
 })
-console.log(createStore(reducer));
+
+console.log(store.getState());
 
 
