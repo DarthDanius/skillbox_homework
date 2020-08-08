@@ -30,10 +30,9 @@ export const saveStore = () => {
   }
 }
 
-export const loadStore = () => {
-  return {
-    type: LOAD_STORE
-  }
-}
-
-// console.log(changeInputValue('Dan', 'Hello!'))
+// export const loadStore = (store) => {
+//   return {
+//     type: LOAD_STORE,
+//     store
+//   }
+// }

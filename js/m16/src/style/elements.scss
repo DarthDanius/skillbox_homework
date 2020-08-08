@@ -71,6 +71,11 @@
     border-radius: 50px;
     background-image: url(../img/close.png);
     background-repeat: no-repeat;
+    vertical-align: bottom;
+    margin-left: 5px;
+  }
+
+  &__remove-wrap {
   }
 
   &__text {

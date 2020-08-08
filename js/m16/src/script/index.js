@@ -21,6 +21,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
-console.log(store.getState());
 
 

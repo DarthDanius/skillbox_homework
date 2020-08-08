@@ -8,6 +8,7 @@ let Post = (props) => {
   try {
     date = (typeof props.date === 'string') ? new Date(props.date) : props.date;
     formatDate = new Intl.DateTimeFormat(['ru', 'en'], { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }).format(date);
+    // console.error('formatDate', formatDate);
   } catch(err) {
     console.error(err);
     return false
@@ -17,7 +18,7 @@ let Post = (props) => {
     <article id={props.id} className="post">
       <p className="post__name">
         {props.name}
-        <span>
+        <span className="post__remove-wrap">
           <button type="button" className="post__remove" onClick={ () => {props.removePost(props.id)} }></button>
         </span>
       </p>
